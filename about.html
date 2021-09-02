@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Garden</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="shortcut icon" href="./img/favicon.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">The Garden</a>
+            </div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="index.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="about-banner"></div>
+    <section class="main">
+        <section class="cover">
+            <div class="hero_content">
+                <!-- <img src="img/cover.png" alt="cover" > -->
+                <div class="cover_text">
+                    <h1>About Us</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div>
+                <div class="heading">
+                    <h1>Our Story</h1>
+                </div>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Id pariatur iusto iste esse animi nulla
+                    suscipit amet voluptate, delectus sint culpa incidunt dicta maiores ipsam illo voluptatibus modi
+                    quos odio?
+                    Facere quasi nesciunt aspernatur maiores dolor temporibus labore sequi similique consequuntur error
+                    sapiente, dolores totam, architecto provident id voluptas cum nostrum minus recusandae sed aliquam
+                    debitis non? Maiores, veritatis accusamus?
+                    <br>//More Content Here//
+                    </p>
+            </div>
+        </section>
+
+    </section>
+    <!-- FOOTER -->
+    <div id="outer-footer">
+        <!-- newsletter section  -->
+        <section class="newsletter">
+
+            <h3>Subscribe us for latest updates</h3>
+
+            <form action="">
+                <input class="box" type="email" placeholder="enter your email">
+                <input type="submit" value="Subscribe" class="btn">
+            </form>
+
+        </section>
+        <footer id="footer" class="section footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-center">
+                        <h3>EXTRAS</h3>
+                        <a href="#">Brands</a>
+                        <a href="#">Gift Certificates</a>
+                        <a href="#">Offers</a>
+                        <a href="#">Specials</a>
+                    </div>
+                    <div class="footer-center">
+                        <h3>INFORMATION</h3>
+                        <a href="#">About Us</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Return Policy</a>
+                    </div>
+                    <div class="footer-center">
+                        <h3>SITE MAP</h3>
+                        <a href="#">Home</a>
+                        <a href="#">Shop</a>
+                        <a href="#">Categories</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    <div class="footer-center">
+                        <h3>CONTACT US</h3>
+                        <div>
+                            <span>
+                                <i class="fa fa-map-marker"></i>
+                            </span>
+                            The Garden Office<br>
+                            Vasant Vihar, New Delhi
+                        </div>
+                        <div>
+                            <span>
+                                &#9993;
+                            </span>
+                            contact@thegarden.com
+                        </div>
+                        <div>
+                            <span>
+                                <i class="fa fa-phone"></i>
+                            </span>
+                            1507-4353-5422
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </footer>
+    <!-- FOLLOW US FOOTER -->
+    <div class="followfooter">
+        <footer id="footer0">
+            <div class="column" div="column1">
+                <h1 width="160px" height="80px"> The Garden</h1>
+            </div>
+        </footer>
+        <footer id="footer1">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fas fa-envelope"></i>
+        </footer>
+        <footer id="footer2">
+            <h6>Designed & Built with &#10084; by Keerti</h6>
+        </footer>
+    </div>
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+        }
+        cancelBtn.onclick = () => {
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
+</body>
+
+</html>

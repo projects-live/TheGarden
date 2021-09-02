@@ -1,0 +1,100 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+.products{
+    display:flex;
+    justify-content:center;
+    align-content: center;
+    min-height: 100vh;
+}
+.product-container{
+    position:relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(250px,1fr));
+    width:1200px;
+    grid-gap:20px;
+    padding: 20px;
+}
+.product-container .product-card{
+    width:100%;
+    background-color: #002E25;
+    border-radius: 20px;
+}
+.product-container .product-card .product-card-image{
+    position:relative;
+    width:100%;
+    height:310px;
+    overflow:hidden;
+    border-radius: 20px 20px 0 0;
+}
+.product-container .product-card .product-card-image img{
+    position: absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: 0.3s ease-in-out;
+    /* transform-origin: right; */
+    top:0;
+    left:0;
+}
+.product-container .product-card:hover  img{
+    transform:scale(1.05); 
+}
+.action{
+    position:absolute;
+    top:10px;
+    right:10px;
+    color:white;
+}
+.action li{
+    list-style: none;
+    width:40px;
+    height:40px;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#002e257e;
+    border-radius:5px;
+    transition: 0.5s ease-in-out;
+    cursor:pointer;
+}
+.action li:hover{
+    background:white;
+    color:#002E25;
+}
+.product-container .product-card .product-content{
+    padding:10px;
+}
+.product-container .product-card .product-name h3{
+    margin:5px 0;
+    font-size:20px;
+    letter-spacing: 0.2px;
+    font-family: 'Poppins' , sans-serif;
+    color: white;
+}
+.product-container .product-card .product-rating{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-container .product-card .product-rating h2{
+    color: white;
+}
+.product-container.product-card .product-rating .rating h2{
+    font-size: 20px;
+    color:whitesmoke;
+}
+.product-container .product-card .product-rating .rating{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.product-container .product-card .product-rating .fas, 
+.product-container .product-card .product-rating .far {
+    color: whitesmoke;
+    /* margin-right:0.5px; */
+    letter-spacing: 5px;
+}
